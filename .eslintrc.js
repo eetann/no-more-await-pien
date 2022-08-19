@@ -13,11 +13,12 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    project: "./tsconfig.json",
   },
   plugins: ["@typescript-eslint", "unused-imports"],
   rules: {
+    "@typescript-eslint/no-floating-promises": ["warn", { ignoreIIFE: true }],
+    "@typescript-eslint/no-misused-promises": "warn",
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
